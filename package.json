@@ -3,6 +3,12 @@
   "version": "0.0.1",
   "type": "module",
   "author": "monsterooo",
+  "description": "A React component for use in Mediabunny.",
+  "keywords": [
+    "react",
+    "mediabunny",
+    "react-mediabunny"
+  ],
   "files": [
     "dist"
   ],
