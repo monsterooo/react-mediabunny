@@ -1,18 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Button } from "./button";
+import { UseMediaInstanceStory } from "./components/use-media-instance-story";
 
 const meta = {
-  title: "Components/Button",
-  component: Button,
+  title: "hooks/useMediaInstance",
+  component: UseMediaInstanceStory,
   parameters: {
     layout: "centered",
   },
-  tags: ["autodocs"],
   args: {
-    label: "Button",
+    id: "video-1",
   },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof UseMediaInstanceStory>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

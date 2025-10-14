@@ -1,1 +1,1 @@
-export { Button } from "./components/button";
+export { useMediaInstance } from "./hooks/use-media-instance";
