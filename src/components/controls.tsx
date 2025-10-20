@@ -27,7 +27,7 @@ export const Controls: React.FC = observer(() => {
     store.setVolume(parseFloat(e.target.value));
   };
 
-  console.log("store.getPlaybackTime():", store.getPlaybackTime());
+  console.log("currentTime:", store.currentTime);
 
   return (
     <div
@@ -56,7 +56,7 @@ export const Controls: React.FC = observer(() => {
         type="range"
         min="0"
         max={store.totalDuration}
-        value={store.getPlaybackTime()}
+        value={store.currentTime}
         onChange={handleProgressChange}
         onMouseDown={() => store.startDraggingProgressBar()}
         onMouseUp={() => store.endDraggingProgressBar()}
@@ -65,8 +65,7 @@ export const Controls: React.FC = observer(() => {
 
       {/* 时间显示 */}
       <span style={{ marginRight: "10px" }}>
-        {formatTime(store.getPlaybackTime())} /{" "}
-        {formatTime(store.totalDuration)}
+        {formatTime(store.currentTime)} / {formatTime(store.totalDuration)}
       </span>
 
       {/* 音量控制 */}

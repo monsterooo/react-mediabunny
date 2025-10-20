@@ -5,7 +5,7 @@ import { MediaPlayerProvider } from "../../provider";
 export function BasicPlayer() {
   return (
     <div>
-      <MediaPlayerProvider>
+      <MediaPlayerProvider resource="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4">
         <h1>Basic Player</h1>
         <VideoPlayer resource="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" />
         <Controls />

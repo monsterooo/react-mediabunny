@@ -25,6 +25,7 @@ export class MediaPlayerStore {
   fileLoaded = false;
   fileName = "";
   totalDuration = 0;
+  currentTime = 0; // => getPlaybackTime
 
   // ============ 播放状态 ============
   playing = false;
@@ -353,6 +354,8 @@ export class MediaPlayerStore {
     if (!this.fileLoaded) return;
 
     const playbackTime = this.getPlaybackTime();
+    // TODO：这里实现需要在拖动进度的时候停止进度条的自动前进
+    this.currentTime = playbackTime;
 
     // 检查播放是否结束
     if (playbackTime >= this.totalDuration) {
